@@ -15,9 +15,11 @@
 
 I build and modernize backend systems where correctness and uptime are not optional. For more than 14 years I have worked on Java platforms for **banking, financial services and electronic invoicing**: transactional services, high-availability infrastructure, enterprise integrations and the slow, careful work of moving legacy systems forward without breaking them.
 
-Today I work as a Senior Software Engineer at **Mercado Libre**, on high-demand backend services, production stability and the migration of Java microservices to Go. Before that I spent several years building Spring Boot microservices with Ports and Adapters architecture for a large bank, and six years leading the development of CFDI electronic invoicing and stamping platforms.
+Today I work as a Senior Software Engineer on high-demand backend services, production stability and the migration of Java microservices to Go. Before that I spent several years building Spring Boot microservices with Ports and Adapters architecture for a large bank, and six years leading the development of CFDI electronic invoicing and stamping platforms.
 
 Java is my primary language. Go and Node.js are part of my day-to-day backend toolbox.
+
+<sub>B.Sc. in Computer Science, Benemérita Universidad Autónoma de Puebla · Oracle Certification · Scrum Fundamentals Certified</sub>
 
 ---
 
@@ -55,21 +57,6 @@ SOAP and REST integrations, CFDI and SAT fiscal services, document processing, H
 <p align="center">
   <img src="assets/technology-stack.png" width="100%" alt="Technology stack in six groups. Backend: Java, Spring Boot and Go (primary), Node.js. Architecture and APIs: REST, GraphQL, SOAP, hexagonal. Data: Oracle, PostgreSQL, MySQL, SQL Server. Persistence and build: Hibernate, MyBatis, Maven, JSF. Platform: Docker, Azure, Linux, CI/CD. Quality and runtime: Git, SonarQube, Tomcat, IntelliJ IDEA.">
 </p>
-
----
-
-## Experience
-
-| Period | Role | Company | Focus |
-|---|---|---|---|
-| 2025 – present | Senior Software Engineer | **Mercado Libre** | High-demand retail and transportation backends · Java → Go migration · production stability and monitoring |
-| 2020 – 2025 | Senior Java Backend Engineer | **INGENIOSI / Anzen Soluciones** | Spring Boot microservices for a large bank · Ports and Adapters · GraphQL and REST · batch optimization · Spring Security |
-| 2019 | Java Backend Developer | **Altavista Software** | Enterprise banking applications · legacy process modernization (Java 8, Linux cron) · SonarQube technical-debt analysis |
-| 2013 – 2019 | Development Coordinator / Senior Developer | **STO Consulting** | CFDI electronic invoicing and stamping · SAT integrations (SOAP, REST, Azure) · HSM security · technical coordination |
-| 2012 – 2013 | Java Developer | **System &amp; Solutions** | Insurance and portfolio management platform on Java and Oracle |
-| 2010 – 2011 | Software Developer | **BUAP** | Digital image processing and medical analysis systems |
-
-<sub>B.Sc. in Computer Science, Benemérita Universidad Autónoma de Puebla · Oracle Certification · Scrum Fundamentals Certified</sub>
 
 ---
 
