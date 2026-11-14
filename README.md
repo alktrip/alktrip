@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero-banner.png" width="100%" alt="Ramón Alejandro Hernández Catrip — Senior Backend Engineer. Java, distributed systems and enterprise architecture. 14+ years in banking, fintech and electronic invoicing. Puebla, Mexico.">
+  <img src="assets/hero-banner.png" width="100%" alt="Alejandro Catrip — Senior Backend Engineer. Java, distributed systems and enterprise architecture. 14+ years in banking, fintech and electronic invoicing. Puebla, Mexico.">
 </p>
 
 <p align="center">
