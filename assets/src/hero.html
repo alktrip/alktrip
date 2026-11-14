@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+html,body{margin:0;background:transparent}
+.card{width:1600px;height:420px;border-radius:22px;overflow:hidden;position:relative;
+background:radial-gradient(900px 420px at 78% 50%,#0f2440 0%,#0b1628 45%,#080e1a 100%);font-family:Inter,sans-serif}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(148,163,184,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.05) 1px,transparent 1px);background-size:40px 40px;
+-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 55%,#000 100%)}
+svg.net{position:absolute;right:0;top:0}
+.txt{position:absolute;left:84px;top:78px;width:860px}
+.kicker{font-family:'DejaVu Sans Mono',monospace;font-size:21px;color:#22d3ee;letter-spacing:.06em;opacity:.9}
+h1{margin:18px 0 0;font-weight:650;font-size:54px;color:#f1f5f9;letter-spacing:-.02em;line-height:1.08}
+.role{margin-top:18px;font-size:28px;color:#cbd5e1;font-weight:450}
+.role b{color:#e2e8f0;font-weight:600}
+.sep{color:#475569;margin:0 10px}
+.meta{position:absolute;left:84px;bottom:62px;font-family:'DejaVu Sans Mono',monospace;font-size:21px;color:#7c8ba1}
+.meta span{color:#94a3b8}
+.bar{position:absolute;left:84px;top:84px;width:0}
+.edge{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(#22d3ee,#3b82f6 60%,#8b5cf6)}
+</style></head><body><div class="card" id="c"><div class="edge"></div><div class="grid"></div>
+<svg class="net" width="900" height="420" viewBox="0 0 900 420" id="net"></svg>
+<div class="txt"><div class="kicker">// senior backend engineer</div>
+<h1>Ramón Alejandro<br>Hernández Catrip</h1>
+<div class="role"><b>Java</b><span class="sep">·</span>Distributed Systems<span class="sep">·</span>Enterprise Architecture</div></div>
+<div class="meta"><span>14+ yrs</span> &nbsp;banking · fintech · e-invoicing &nbsp;&nbsp;<span>Puebla, MX</span></div>
+</div>
+<script>
+// deterministic PRNG
+let s=7;const r=()=>(s=(s*16807)%2147483647)/2147483647;
+const svg=document.getElementById('net');const NS='http://www.w3.org/2000/svg';
+const el=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);svg.appendChild(e);return e};
+// three architectural layers as concentric hexagons centered right
+const cx=500,cy=210;const nodes=[];
+const hex=(R,rot,layer)=>{const pts=[];for(let i=0;i<6;i++){const a=Math.PI/3*i+rot;pts.push([cx+R*Math.cos(a),cy+R*Math.sin(a)*0.92,layer])}return pts};
+const L0=[[cx,cy,0]],L1=hex(70,Math.PI/6,1),L2=hex(150,0,2),L3=hex(245,Math.PI/6,3);
+// outer ring extra nodes
+const L4=[];for(let i=0;i<12;i++){const a=Math.PI/6*i+Math.PI/12;const R=300+r()*24;L4.push([cx+R*Math.cos(a),cy+R*Math.sin(a)*0.56,4])}
+// hexagon outlines
+[[70,Math.PI/6],[150,0],[245,Math.PI/6]].forEach(([R,rot],i)=>{const p=hex(R,rot).map(q=>q[0].toFixed(1)+','+q[1].toFixed(1)).join(' ');
+el('polygon',{points:p,fill:i==0?'rgba(34,211,238,.05)':'none',stroke:['#22d3ee','#3b82f6','#334155'][i],'stroke-opacity':[.55,.35,.5][i],'stroke-width':i==2?1:1.2,'stroke-dasharray':i==2?'3 6':''})});
+const line=(a,b,c,o,w)=>el('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:c,'stroke-opacity':o,'stroke-width':w||1});
+L1.forEach(p=>line(L0[0],p,'#22d3ee',.35));
+L2.forEach((p,i)=>{line(p,L1[i],'#3b82f6',.3);line(p,L1[(i+5)%6],'#3b82f6',.18)});
+L3.forEach((p,i)=>{line(p,L2[i],'#64748b',.28);line(p,L2[(i+1)%6],'#64748b',.18)});
+L4.forEach((p,i)=>{line(p,L3[Math.floor(i/2)%6],'#475569',.22);if(r()>.5)line(p,L4[(i+1)%12],'#334155',.25)});
+// a few highlighted request paths
+[[L4[1],L3[0],L2[1],L1[1],L0[0]],[L4[7],L3[3],L2[4],L1[4],L0[0]]].forEach((path,k)=>{
+ el('polyline',{points:path.map(p=>p[0]+','+p[1]).join(' '),fill:'none',stroke:k?'#8b5cf6':'#22d3ee','stroke-opacity':.75,'stroke-width':1.6})});
+const dot=(p,rad,f,o)=>{el('circle',{cx:p[0],cy:p[1],r:rad*3,fill:f,'fill-opacity':o*.12});el('circle',{cx:p[0],cy:p[1],r:rad,fill:f,'fill-opacity':o})};
+L4.forEach(p=>dot(p,2.4,'#64748b',.8));L3.forEach(p=>dot(p,3.2,'#94a3b8',.9));L2.forEach(p=>dot(p,3.6,'#3b82f6',1));L1.forEach(p=>dot(p,4,'#22d3ee',1));
+// core: small hexagon
+const core=hex(16,Math.PI/6).map(q=>q[0]+','+q[1]).join(' ');el('polygon',{points:core,fill:'#0b1628',stroke:'#22d3ee','stroke-width':1.6});
+el('circle',{cx,cy,r:4,fill:'#e2e8f0'});
+// faint code glyphs
+['{ }','</>','=>','@Service','λ'].forEach((t,i)=>{const p=L4[[2,4,8,10,6][i]];const e=el('text',{x:p[0]+10,y:p[1]-8,fill:'#475569','font-family':'DejaVu Sans Mono','font-size':12,'fill-opacity':.7});e.textContent=t});
+</script></body></html>

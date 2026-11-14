@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+html,body{margin:0;background:transparent}
+#c{width:1100px;height:860px;border-radius:18px;background:linear-gradient(180deg,#0b1628,#080e1a);overflow:hidden}
+text{font-family:Inter,sans-serif}.m{font-family:'DejaVu Sans Mono',monospace}
+</style></head><body><div id="c"><svg width="1100" height="860" viewBox="0 0 1100 860">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker>
+<marker id="av" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8b5cf6"/></marker>
+</defs>
+<text x="32" y="50" class="m" fill="#22d3ee" font-size="14">// alktrip/edita · alktrip/edita-plugins</text>
+<text x="32" y="84" fill="#e2e8f0" font-size="26" font-weight="600">Edita — architecture and signed plugin supply chain</text>
+<text x="32" y="112" fill="#7c8ba1" font-size="15">Derived from the public source tree (src/, plugin-sdk/, third_party/) and the catalog CI workflow.</text>
+
+<rect x="32" y="140" width="1036" height="420" rx="16" fill="rgba(15,23,42,.55)" stroke="#1e3a5f"/>
+<text x="54" y="172" class="m" fill="#93c5fd" font-size="14">EDITA · C++20 · Qt 6 · GPL-3.0</text>
+<g font-size="15">
+<rect x="54" y="188" width="992" height="86" rx="12" fill="#0f1a2e" stroke="#1a2740"/>
+<text x="74" y="216" fill="#e2e8f0" font-weight="600" font-size="17">UI · Qt Widgets</text>
+<text x="74" y="242" fill="#a3b1c4">tabs and split views · command palette · Folder as Workspace · Function List</text>
+<text x="74" y="263" fill="#a3b1c4">integrated terminal (libvterm) · compare · Markdown preview (md4c)</text>
+
+<rect x="54" y="286" width="992" height="108" rx="12" fill="#0f1a2e" stroke="#1a2740"/>
+<text x="74" y="314" fill="#e2e8f0" font-weight="600" font-size="17">Core services</text>
+<text x="74" y="340" fill="#a3b1c4">sessions · macros · local history · encoding detection (uchardet) · Boost regex search</text>
+<text x="74" y="361" fill="#a3b1c4">Notepad++ XML config (pugixml) · LSP client · Git integration</text>
+<text x="74" y="382" fill="#a3b1c4">plugin catalog and installer · minisign verification (OpenSSL Ed25519)</text>
+
+<rect x="54" y="406" width="488" height="104" rx="12" fill="rgba(34,211,238,.06)" stroke="rgba(34,211,238,.4)"/>
+<text x="74" y="434" fill="#e2e8f0" font-weight="600" font-size="17">Editing engine</text>
+<text x="74" y="460" fill="#a3b1c4">Scintilla 5 · Lexilla · 95 languages</text>
+<text x="74" y="484" fill="#8a99ae" class="m" font-size="13">same engine as Notepad++</text>
+<rect x="558" y="406" width="488" height="104" rx="12" fill="rgba(139,92,246,.07)" stroke="rgba(139,92,246,.45)"/>
+<text x="578" y="434" fill="#e2e8f0" font-weight="600" font-size="17">Plugin host</text>
+<text x="578" y="460" fill="#a3b1c4">C API: NPPM_* / NPPN_* · Win32 layer on Qt</text>
+<text x="578" y="484" fill="#8a99ae" class="m" font-size="13">edita_plugin.h · stable for 1.x</text>
+<text x="54" y="540" fill="#a3b1c4" font-size="14"><tspan class="m" fill="#8a99ae">quality ·</tspan> 79 Qt Test suites · CI on x86_64 and arm64 · ASan + UBSan job</text>
+</g>
+
+<text x="32" y="604" class="m" fill="#94a3b8" font-size="13">EXTERNAL PROCESSES</text>
+<g font-size="16">
+<rect x="32" y="618" width="320" height="64" rx="12" fill="#0f1a2e" stroke="#1a2740"/><text x="50" y="645" fill="#e2e8f0" font-weight="600">Language servers</text><text x="50" y="668" fill="#8a99ae" class="m" font-size="13">LSP · JSON-RPC</text>
+<rect x="32" y="692" width="320" height="64" rx="12" fill="#0f1a2e" stroke="#1a2740"/><text x="50" y="719" fill="#e2e8f0" font-weight="600">git CLI</text><text x="50" y="742" fill="#8a99ae" class="m" font-size="13">hunks · blame · commit</text>
+<rect x="32" y="766" width="320" height="64" rx="12" fill="#0f1a2e" stroke="#1a2740"/><text x="50" y="793" fill="#e2e8f0" font-weight="600">Build tools</text><text x="50" y="816" fill="#8a99ae" class="m" font-size="13">make · cmake · npm · cargo…</text>
+</g>
+
+<text x="400" y="604" class="m" fill="#c4b5fd" font-size="13">EDITA-PLUGINS · SIGNED CATALOG</text>
+<g font-size="15">
+<rect x="400" y="618" width="200" height="96" rx="12" fill="#0f1a2e" stroke="#2e2a5a"/><text x="418" y="646" fill="#e2e8f0" font-weight="600" font-size="16">Recipe</text><text x="418" y="672" fill="#a3b1c4">upstream tag</text><text x="418" y="694" fill="#a3b1c4">+ SHA-256 + patches</text>
+<rect x="634" y="618" width="200" height="96" rx="12" fill="#0f1a2e" stroke="#2e2a5a"/><text x="652" y="646" fill="#e2e8f0" font-weight="600" font-size="16">CI build + test</text><text x="652" y="672" fill="#a3b1c4">x86_64 · arm64</text><text x="652" y="694" fill="#a3b1c4">GitHub Actions</text>
+<rect x="868" y="618" width="200" height="96" rx="12" fill="#0f1a2e" stroke="#2e2a5a"/><text x="886" y="646" fill="#e2e8f0" font-weight="600" font-size="16">Release</text><text x="886" y="672" fill="#a3b1c4">plugins.json</text><text x="886" y="694" fill="#a3b1c4">+ .minisig signature</text>
+</g>
+<g stroke="#8b5cf6" stroke-width="1.5" fill="none" marker-end="url(#av)"><path d="M600,666 L632,666"/><path d="M834,666 L866,666"/>
+<path d="M968,714 L968,770 L851,770 L851,516"/></g>
+<text x="400" y="800" fill="#c4b5fd" font-size="14">Plugins Admin verifies the signature and</text>
+<text x="400" y="820" fill="#c4b5fd" font-size="14">each package's SHA-256 before installing</text>
+<g stroke="#64748b" stroke-width="1.4" fill="none" marker-end="url(#a)"><path d="M180,560 L180,616"/></g>
+</svg></div></body></html>
